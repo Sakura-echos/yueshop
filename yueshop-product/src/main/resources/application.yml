@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.98.125.174:3306/eaglemall_pms?characterEncoding=utf8&useUnicode=true&serverTimezone=UTC
+    username: root
+    password: rj1183
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: yueshop-product
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 12000
+logging:
+  level:
+    com.yueshop: debug

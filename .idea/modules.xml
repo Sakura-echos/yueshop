@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/renren-fast/renren-fast.iml" filepath="$PROJECT_DIR$/renren-fast/renren-fast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop.iml" filepath="$PROJECT_DIR$/yueshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-common/yueshop-common.iml" filepath="$PROJECT_DIR$/yueshop-common/yueshop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-coupon/yueshop-coupon.iml" filepath="$PROJECT_DIR$/yueshop-coupon/yueshop-coupon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-gateway/yueshop-gateway.iml" filepath="$PROJECT_DIR$/yueshop-gateway/yueshop-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-member/yueshop-member.iml" filepath="$PROJECT_DIR$/yueshop-member/yueshop-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-order/yueshop-order.iml" filepath="$PROJECT_DIR$/yueshop-order/yueshop-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-product/yueshop-product.iml" filepath="$PROJECT_DIR$/yueshop-product/yueshop-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-third-party/yueshop-third-party.iml" filepath="$PROJECT_DIR$/yueshop-third-party/yueshop-third-party.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yueshop-ware/yueshop-ware.iml" filepath="$PROJECT_DIR$/yueshop-ware/yueshop-ware.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product_route
+          uri: lb://yueshop-product #lb  负载均衡到yueshop-product服务
+          predicates:
+            - Path=/api/product/**      #所有带有api的请求由网关来匹配转发
+          filters:              #通过过滤器将api的路径重写
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+
+        - id: third_party_route
+          uri: lb://yueshop-third-party #lb  负载均衡到yueshop-product服务
+          predicates:
+            - Path=/api/thirdparty/**      #所有带有api的请求由网关来匹配转发
+          filters:              #通过过滤器将api的路径重写
+            - RewritePath=/api/thirdparty(?<segment>/?.*),/$\{segment}
+
+        - id: admin_route
+          uri: lb://renren-fast #lb  负载均衡到renren-fast服务
+          predicates:
+            - Path=/api/**      #所有带有api的请求由网关来匹配转发
+          filters:              #通过过滤器将api的路径重写为renren-fast
+            - RewritePath=/api(?<segment>/?.*), /renren-fast/$\{segment}
+
+#        - id: baidu_route
+#          uri: https://www.baidu.com
+#          predicates:
+#            - Method=POST
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: yueshop-gateway

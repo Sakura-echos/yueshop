@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yueshop-member" />
+        <module name="yueshop-product" />
+        <module name="yueshop-gateway" />
+        <module name="yueshop-third-party" />
+        <module name="yueshop-ware" />
+        <module name="renren-fast" />
+        <module name="yueshop-order" />
+        <module name="yueshop-coupon" />
+        <module name="yueshop-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="renren-fast" target="1.8" />
+      <module name="yueshop" target="1.5" />
+      <module name="yueshop-common" target="8" />
+      <module name="yueshop-coupon" target="1.8" />
+      <module name="yueshop-gateway" target="1.8" />
+      <module name="yueshop-member" target="1.8" />
+      <module name="yueshop-order" target="1.8" />
+      <module name="yueshop-product" target="1.8" />
+      <module name="yueshop-third-party" target="1.8" />
+      <module name="yueshop-ware" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="renren-fast" options="-parameters" />
+    </option>
+  </component>
+</project>

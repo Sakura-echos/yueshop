@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xis="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.yueshop</groupId>
+    <artifactId>yueshop</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>yueshop</name>
+    <description>商城系統</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>yueshop-coupon</module>
+        <module>yueshop-member</module>
+        <module>yueshop-order</module>
+        <module>yueshop-ware</module>
+        <module>yueshop-product</module>
+        <module>renren-fast</module>
+        <module>yueshop-common</module>
+    </modules>
+</project>
