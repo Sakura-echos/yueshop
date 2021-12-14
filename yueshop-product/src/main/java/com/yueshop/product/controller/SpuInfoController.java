@@ -3,6 +3,7 @@ package com.yueshop.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.yueshop.product.vo.SpuSaveVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,9 +21,9 @@ import com.yueshop.common.utils.R;
 /**
  * spu信息
  *
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:03
  */
 @RestController
 @RequestMapping("product/spuinfo")
@@ -55,9 +56,9 @@ public class SpuInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody SpuInfoEntity spuInfo){
-		spuInfoService.save(spuInfo);
-
+    public R save(@RequestBody SpuSaveVo vo){
+//		spuInfoService.save(spuInfo);
+        spuInfoService.saveSpuInfo(vo);
         return R.ok();
     }
 

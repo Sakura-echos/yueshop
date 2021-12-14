@@ -17,13 +17,12 @@ import com.yueshop.common.utils.PageUtils;
 import com.yueshop.common.utils.R;
 
 
-
 /**
  * 商品三级分类
  *
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:03
  */
 @RestController
 @RequestMapping("product/category")
@@ -36,10 +35,10 @@ public class CategoryController {
      * 列表
      */
     @RequestMapping("/list/tree")
-    public R list(@RequestParam Map<String, Object> params){
-        //1.查询所有分类数据
-        //2.从分类数据中组成父子结构
+    public R list(@RequestParam Map<String, Object> params) {
+        //1 定义listWithTree方法进行三级分类的信息查询
         List<CategoryEntity> list = categoryService.listWithTree();
+        //2 返回结果
         return R.ok().put("data", list);
     }
 
@@ -48,8 +47,8 @@ public class CategoryController {
      * 信息
      */
     @RequestMapping("/info/{catId}")
-    public R info(@PathVariable("catId") Long catId){
-		CategoryEntity category = categoryService.getById(catId);
+    public R info(@PathVariable("catId") Long catId) {
+        CategoryEntity category = categoryService.getById(catId);
 
         return R.ok().put("data", category);
     }
@@ -58,8 +57,8 @@ public class CategoryController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody CategoryEntity category){
-		categoryService.save(category);
+    public R save(@RequestBody CategoryEntity category) {
+        categoryService.save(category);
 
         return R.ok();
     }
@@ -68,17 +67,18 @@ public class CategoryController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody CategoryEntity category){
+    public R update(@RequestBody CategoryEntity category) {
 //        categoryService.updateById(category);
-        categoryService.updateDetialById(category);
+        categoryService.updateDetailById(category);
         return R.ok();
     }
 
     /**
-     * 逻辑删除
+     * 删除
      */
     @RequestMapping("/delete")
-    public R delete(@RequestBody Long[] catIds){
+    public R delete(@RequestBody Long[] catIds) {
+//        categoryService.removeByIds(Arrays.asList(catIds));
         categoryService.removeMenuByIds(Arrays.asList(catIds));
         return R.ok();
     }

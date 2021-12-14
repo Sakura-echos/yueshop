@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import com.yueshop.common.valid.AddGroup;
-import com.yueshop.common.valid.ListValid;
+import com.yueshop.common.valid.ListValue;
 import com.yueshop.common.valid.UpdateGroup;
 import com.yueshop.common.valid.UpdateStatusGroup;
 import lombok.Data;
@@ -18,9 +18,9 @@ import javax.validation.constraints.*;
 /**
  * 品牌
  * 
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:03
  */
 @Data
 @TableName("pms_brand")
@@ -30,7 +30,7 @@ public class BrandEntity implements Serializable {
 	/**
 	 * 品牌id
 	 */
-	@NotNull(message = "修改品牌时，品牌id是必须提供的",groups = {UpdateGroup.class})
+	@NotNull(message = "修改品牌时，品牌id是必须提供",groups = {UpdateGroup.class})
 	@Null(message = "添加品牌时，品牌id是必须为null",groups = {AddGroup.class})
 	@TableId
 	private Long brandId;
@@ -52,19 +52,19 @@ public class BrandEntity implements Serializable {
 	/**
 	 * 显示状态[0-不显示；1-显示]
 	 */
-	@ListValid(vals = {0,1},groups = {AddGroup.class,UpdateGroup.class,UpdateStatusGroup.class})
+	@ListValue(values ={0,1},groups = {AddGroup.class,UpdateGroup.class, UpdateStatusGroup.class})
 	private Integer showStatus;
 	/**
 	 * 检索首字母
 	 */
 	@NotEmpty(message = "检索首字母不能为空",groups = {AddGroup.class,UpdateGroup.class})
-	@Pattern(regexp = "^[a-zA-Z]$",message = "检索字段必须是大小写字母",groups = {AddGroup.class,UpdateGroup.class})
+//	@Pattern(regexp = "^[a_zA-Z]$",message = "检索字段必须是一个大小写字母",groups = {AddGroup.class,UpdateGroup.class})
 	private String firstLetter;
 	/**
 	 * 排序
 	 */
-	@NotNull(message = "排序不能为空",groups = {AddGroup.class,UpdateGroup.class})
-	@Min(value=0,message = "排序不能为空且不小于0",groups = {AddGroup.class,UpdateGroup.class})
+	@NotNull(message = "排序字段不能为空",groups = {AddGroup.class,UpdateGroup.class})
+	@Min(value = 0,message = "排序字段必须要大于等于0",groups = {AddGroup.class,UpdateGroup.class})
 	private Integer sort;
 
 }

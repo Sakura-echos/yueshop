@@ -1,5 +1,6 @@
 package com.yueshop.product.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -10,9 +11,9 @@ import lombok.Data;
 /**
  * 商品属性
  * 
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:03
  */
 @Data
 @TableName("pms_attr")
@@ -61,4 +62,6 @@ public class AttrEntity implements Serializable {
 	 */
 	private Integer showDesc;
 
+	/*//属性分组的关联引用  不规范
+	private Long attrGroupId;*/
 }

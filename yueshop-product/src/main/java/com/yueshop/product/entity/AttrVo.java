@@ -3,11 +3,9 @@ package com.yueshop.product.entity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
+//定义一个属性的VO实体类用于接收（封装）请求数据
 @Data
 public class AttrVo {
-
-    //属性分组的关联引用
-    private Long AttrGroupId;
 
     /**
      * 属性id
@@ -49,4 +47,7 @@ public class AttrVo {
      * 快速展示【是否展示在介绍上；0-否 1-是】，在sku中仍然可以调整
      */
     private Integer showDesc;
+
+    //属性分组的关联引用
+    private Long attrGroupId;
 }

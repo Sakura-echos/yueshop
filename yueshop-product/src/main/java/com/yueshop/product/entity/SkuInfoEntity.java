@@ -11,9 +11,9 @@ import lombok.Data;
 /**
  * sku信息
  * 
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:02
  */
 @Data
 @TableName("pms_sku_info")

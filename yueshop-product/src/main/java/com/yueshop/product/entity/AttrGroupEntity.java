@@ -7,14 +7,13 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
-import lombok.Value;
 
 /**
  * 属性分组
  * 
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:03
  */
 @Data
 @TableName("pms_attr_group")
@@ -47,8 +46,8 @@ public class AttrGroupEntity implements Serializable {
 	 */
 	private Long catelogId;
 	/**
-	 * 用于展示当前分组的三个分类路径
-	 * exist = false 表示与数据库没有映射关系
+	 * 用于展示当前属性分组的分类路径【三个分类id】
+	 * exist = false表示和数据库表是没有映射关系的
 	 */
 	@TableField(exist = false)
 	private Long[] catelogPath;

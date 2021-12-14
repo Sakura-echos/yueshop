@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-upload
-      action="http://alen-bucket.oss-cn-guangzhou.aliyuncs.com"
+      action="http://yueshop1202.oss-cn-guangzhou.aliyuncs.com"
       :data="dataObj"
       list-type="picture-card"
       :file-list="fileList"

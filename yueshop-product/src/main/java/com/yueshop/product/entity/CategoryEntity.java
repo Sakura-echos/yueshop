@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -15,9 +14,9 @@ import lombok.Data;
 /**
  * 商品三级分类
  * 
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:03
  */
 @Data
 @TableName("pms_category")
@@ -42,7 +41,7 @@ public class CategoryEntity implements Serializable {
 	 */
 	private Integer catLevel;
 	/**
-	 * 是否显示[0-不显示，1显示]
+	 * 是否显示[0-不显示(逻辑删除)，1显示]  TableLogic逻辑删除
 	 */
 	@TableLogic(value = "1",delval = "0")
 	private Integer showStatus;
@@ -63,11 +62,12 @@ public class CategoryEntity implements Serializable {
 	 */
 	private Integer productCount;
 
-	/*
-	* 子分类集合引用
-	* */
-	@JsonInclude(JsonInclude.Include.NON_EMPTY)//不为空时才包含在json数据中
-	@TableField(exist = false) //@TableField(exist = false)表示当前的属性与数据库的表没有映射关系
+	/**
+	 * 子分类集合引用
+	 * exist = false 表示当前的属性和数据库表是没有映射关系的
+	 */
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)//不为空的时候，才包含在json数据中
+	@TableField(exist = false)
 	private List<CategoryEntity> children;
 
 }

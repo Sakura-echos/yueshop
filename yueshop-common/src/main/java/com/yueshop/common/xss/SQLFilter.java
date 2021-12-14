@@ -8,7 +8,6 @@
 
 package com.yueshop.common.xss;
 
-
 import com.yueshop.common.exception.RRException;
 import org.apache.commons.lang.StringUtils;
 

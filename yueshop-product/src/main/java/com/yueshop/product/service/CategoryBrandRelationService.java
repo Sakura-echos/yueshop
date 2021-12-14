@@ -2,6 +2,7 @@ package com.yueshop.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yueshop.common.utils.PageUtils;
+import com.yueshop.product.entity.BrandEntity;
 import com.yueshop.product.entity.CategoryBrandRelationEntity;
 
 import java.util.List;
@@ -10,9 +11,9 @@ import java.util.Map;
 /**
  * 品牌分类关联
  *
- * @author alen
- * @email alen@gmail.com
- * @date 2021-11-30 21:49:03
+ * @author Jerry
+ * @email Jerrt@gmail.com
+ * @date 2021-11-25 17:02:03
  */
 public interface CategoryBrandRelationService extends IService<CategoryBrandRelationEntity> {
 
@@ -20,10 +21,12 @@ public interface CategoryBrandRelationService extends IService<CategoryBrandRela
 
     void saveDetail(CategoryBrandRelationEntity categoryBrandRelation);
 
-    Boolean queryCidAndBid(CategoryBrandRelationEntity categoryBrandRelation);
+    boolean queryByCidAndBid(CategoryBrandRelationEntity categoryBrandRelation);
 
-    void updateBrandName(Long brandId, String brandName);
+    void updateBrandName(Long brandId,String brandName);
 
-    void updateCategoryName(Long catId, String name);
+    void updateCategoryName(Long categoryId,String name);
+
+    List<BrandEntity> getBrandsByCatId(Long catId);
 }
 
