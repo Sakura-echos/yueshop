@@ -2,6 +2,7 @@ package com.yueshop.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yueshop.common.utils.PageUtils;
+import com.yueshop.product.entity.SpuInfoDescEntity;
 import com.yueshop.product.entity.SpuInfoEntity;
 import com.yueshop.product.vo.SpuSaveVo;
 
@@ -19,5 +20,9 @@ public interface SpuInfoService extends IService<SpuInfoEntity> {
     PageUtils queryPage(Map<String, Object> params);
 
     void saveSpuInfo(SpuSaveVo vo);
+
+    void saveBaseSpuInfo(SpuInfoEntity spuInfoEntity);
+
+    PageUtils queryPageByCondition(Map<String, Object> params);
 }
 
